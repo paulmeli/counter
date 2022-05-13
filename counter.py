@@ -20,7 +20,7 @@ for char in file_text:
 
 # Plot values on graph
 plt.bar(keys_list, list(syll_dict.values())) # plt.bar(x data, y data) displays graph as bars
-plt.title("Number of Occurrences vs. Letters and Numbers in Syllabus")
+plt.title("Number of Occurrences vs. Letters and Numbers in File")
 plt.xlabel('Letters and Numbers')
 plt.ylabel('Number of Occurrences')
 plt.show()
