@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
-from tkinter import Tk     # from tkinter import Tk for Python 3.x
+from tkinter import Tk     
 from tkinter.filedialog import askopenfilename
 
-Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
-filename = askopenfilename(filetypes=[("Text files", "*.txt"), ("All Files", "*.*")]) # show an "Open" dialog box and return the path to the selected file
+Tk().withdraw() # Prevents root window/full GUI from appearing
+filename = askopenfilename(filetypes=[("Text files", "*.txt"), ("All Files", "*.*")]) # Creates "Open" dialog box and returns selected file path
 print(filename)
 
-# Read syllabus file
+# Read text file
 with open(filename) as in_file:
     file_text = in_file.read()
 
