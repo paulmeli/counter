@@ -1,7 +1,13 @@
 import matplotlib.pyplot as plt
+from tkinter import Tk     # from tkinter import Tk for Python 3.x
+from tkinter.filedialog import askopenfilename
+
+Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+print(filename)
 
 # Read syllabus file
-with open("syllabus.txt") as in_file:
+with open(filename) as in_file:
     file_text = in_file.read()
 
 keys_list = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
